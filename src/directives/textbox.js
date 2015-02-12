@@ -10,6 +10,6 @@ angular.module('ngSurvey')
             link: function($scope, element, attrs, controllers){
                 
             }
-        }
+        };
         
     });
