@@ -1,0 +1,21 @@
+{
+  "name": "ngSurveySample",
+  "version": "0.0.0",
+  "homepage": "https://github.com/InstanceOfAnObject/ng-survey",
+  "authors": [
+    "Alexandre Simoes <mail@alexcode.com>"
+  ],
+  "description": "Sample site to demonstrate ngSurvey",
+  "main": "index.html",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.3.13"
+  }
+}
