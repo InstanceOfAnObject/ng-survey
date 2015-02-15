@@ -1,1 +1,1 @@
-angular.module('testapp', []);
+angular.module('testapp', ['ngSurvey']);

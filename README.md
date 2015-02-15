@@ -46,9 +46,9 @@ The main difference between the two is that a Tests expect a correct answer and 
           group: 'javascript', // optional question group
           fields: [
             { id: 'region1_field1', type: 'textbox', mandatory: true, validation: 'integer|decimal|regex|function' },
-            { id: 'region1_field1', type: 'checkbox' },
-            { id: 'region1_field2', type: 'select', options: [ { value: '', text: '' } | function ] },  // support ajax to get options
-            { id: 'region1_field2', type: 'multiple_choice', allowMultiple: true, options: [ { value: '', text: '' } | function ] }, // support ajax to get options
+            { id: 'region1_field2', type: 'checkbox' },
+            { id: 'region1_field3', type: 'select', options: [ { value: '', text: '' } | function ] },  // support ajax to get options
+            { id: 'region1_field4', type: 'multiple_choice', allowMultiple: true, options: [ { value: '', text: '' } | function ] }, // support ajax to get options
           ],
           actions: [
             { condition: '', action: '' } // ex: evaluate fields and show/hide regions.
