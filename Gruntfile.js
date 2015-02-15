@@ -20,10 +20,10 @@ module.exports = function(grunt) {
     
     concat: {
         options: {
-            separator: ';'
+            separator: ';\n\n'
         },
         dist: {
-            src: [ 'src/module.js', 'src/directives/*.js' ],
+            src: [ 'src/module.js', 'src/directives/**/*.js' ],
             dest: 'build/<%= pkg.name %>.js'
         }
     }
