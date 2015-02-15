@@ -10,7 +10,7 @@ angular.module('ngSurvey')
             template: function() { 
                 var tmpl = [];
                 tmpl.push('<label for="{{field.id}}" ng-bind="field.caption"></label>');
-                tmpl.push('<input id="field.id" type="text" ng-model="field.value" />');
+                tmpl.push('<input id="{{field.id}}" type="text" ng-model="field.value" />');
                 
                 return tmpl.join('');
             },

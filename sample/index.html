@@ -9,7 +9,7 @@
         
         <div survey src="mc.survey"></div>
         
-        <div>{{mc.survey}}</div>
+        <div ng-bind="mc.survey | json"></div>
         
         <!-- scripts -->
         <script type="text/javascript" src="bower_components/angular/angular.min.js"></script>

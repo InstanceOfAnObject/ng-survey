@@ -1,5 +1,80 @@
 // initialize ngSurvey module
-angular.module('ngSurvey', []);;/*
+angular.module('ngSurvey', []);;
+
+;
+
+;
+
+// survey select (dropdown) control
+angular.module('ngSurvey')
+    .directive('surveyControlSelect', function(){
+        
+        return {
+            restrict: 'A',
+            scope: {
+                field: '=src'
+            },
+            template: function() { 
+                var tmpl = [];
+                tmpl.push('<label for="{{field.id}}" ng-bind="field.caption"></label>');
+                tmpl.push('<select id="{{field.id}}" ng-options="option.value as option.text for option in field.options" ng-model="field.value"></select>');
+                
+                return tmpl.join('');
+            },
+            link: function($scope, element, attrs, controllers){
+                
+            }
+        };
+        
+    });;
+
+// survey textbox control
+angular.module('ngSurvey')
+    .directive('surveyControlTextarea', function(){
+        
+        return {
+            restrict: 'A',
+            scope: {
+                field: '=src'
+            },
+            template: function() { 
+                var tmpl = [];
+                tmpl.push('<label for="{{field.id}}" ng-bind="field.caption"></label>');
+                tmpl.push('<textarea id="{{field.id}}" ng-model="field.value" />');
+                
+                return tmpl.join('');
+            },
+            link: function($scope, element, attrs, controllers){
+                
+            }
+        };
+        
+    });;
+
+// survey textbox control
+angular.module('ngSurvey')
+    .directive('surveyControlTextbox', function(){
+        
+        return {
+            restrict: 'A',
+            scope: {
+                field: '=src'
+            },
+            template: function() { 
+                var tmpl = [];
+                tmpl.push('<label for="{{field.id}}" ng-bind="field.caption"></label>');
+                tmpl.push('<input id="{{field.id}}" type="text" ng-model="field.value" />');
+                
+                return tmpl.join('');
+            },
+            link: function($scope, element, attrs, controllers){
+                
+            }
+        };
+        
+    });;
+
+/*
     The main survey directive, everything else is generated inside this element.
 */
 angular.module('ngSurvey')
@@ -24,7 +99,9 @@ angular.module('ngSurvey')
                 
             }
         };
-    }]);;/*
+    }]);;
+
+/*
     Each region have several fields (questions).
     Each field is represented by this directive.
     It's here that we decide which edit control will be displayed.
@@ -68,7 +145,9 @@ angular.module('ngSurvey')
                 elem.replaceWith(el);
             }
         };
-    }]);;/*
+    }]);;
+
+/*
     Surveys are devided in regions.
     Each region is represented by this directive.
 */
