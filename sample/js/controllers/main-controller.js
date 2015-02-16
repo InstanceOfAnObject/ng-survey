@@ -26,8 +26,21 @@ angular.module('testapp')
                     group: 'angularjs', // optional question group
                     fields: [
                         { id: 'region2_field1', type: 'textbox', caption: 'Question 1' },
-                        { id: 'region2_field2', type: 'textbox', caption: 'Question 2' },
-                        { id: 'region2_field3', type: 'textbox', caption: 'Question 3' }
+                        { id: 'region2_field2', type: 'multiplechoice', caption: 'Choose all that apply:',
+                            options: [
+                                { text: 'Option 1' },
+                                { text: 'Option 2' },
+                                { text: 'Option 3' }
+                            ]
+                        },
+                        { id: 'region2_field3', type: 'multiplechoice', singleAnswer: true, caption: 'Choose the most correct:',
+                            options: [
+                                { text: 'Option 1', value: 'opt1value' },
+                                { text: 'Option 2', value: 'opt2value' },
+                                { text: 'Option 3', value: 'opt3value' },
+                                { text: 'Option 4', value: 'opt4value' }
+                            ]
+                        },
                     ]
                 }
             ]

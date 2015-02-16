@@ -21,6 +21,9 @@ angular.module('ngSurvey')
                 case 'select':
                     tmpl.push('<div survey-control-select src="field"></div>');
                     break;
+                case 'multiplechoice':
+                    tmpl.push('<div survey-control-multiple-choice src="field"></div>');
+                    break;
                 default:
                     tmpl.push('<span>Unsupported field type</span>');
                     break;
