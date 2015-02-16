@@ -13,7 +13,7 @@ angular.module('ngSurvey')
             
             switch (type) {
                 case 'textbox':
-                    tmpl.push('<div survey-control-textbox src="field"></div>');
+                    tmpl.push('<div survey-control-textbox class="form-group" src="field"></div>');
                     break;
                 case 'textarea':
                     tmpl.push('<div survey-control-textarea src="field"></div>');

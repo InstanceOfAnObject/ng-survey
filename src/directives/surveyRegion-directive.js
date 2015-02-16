@@ -8,11 +8,12 @@ angular.module('ngSurvey')
         return {
             restrict: 'A',
             scope: {
-                src: '='  
+                src: '=',
+                qidx: '='
             },
             template: function() { 
                 var tmpl =  [];
-                tmpl.push('<div data-ng-repeat="field in src">');
+                tmpl.push('<div data-ng-repeat="field in src" ng-show="$index == qidx">');
                 tmpl.push('  <div survey-field src="field"></div>');
                 tmpl.push('</div>');
                 

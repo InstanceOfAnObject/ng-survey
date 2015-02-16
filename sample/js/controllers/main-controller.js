@@ -26,6 +26,8 @@ angular.module('testapp')
                     group: 'angularjs', // optional question group
                     fields: [
                         { id: 'region2_field1', type: 'textbox', caption: 'Question 1' },
+                        
+                        /* Example of a multiple answer multiple choice question */
                         { id: 'region2_field2', type: 'multiplechoice', caption: 'Choose all that apply:',
                             options: [
                                 { text: 'Option 1' },
@@ -33,6 +35,8 @@ angular.module('testapp')
                                 { text: 'Option 3' }
                             ]
                         },
+                        
+                        /* Example of a single answer multiple choice question */
                         { id: 'region2_field3', type: 'multiplechoice', singleAnswer: true, caption: 'Choose the most correct:',
                             options: [
                                 { text: 'Option 1', value: 'opt1value' },

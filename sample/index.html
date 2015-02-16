@@ -2,16 +2,23 @@
 <html data-ng-app="testapp">
     <head>
         <title></title>
+        
+        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css" type="text/css" />
+        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css" type="text/css" />
     </head>
     <body data-ng-controller="Main as mc">
         
         <h1 data-ng-bind="mc.header"></h1>
         
-        <div survey src="mc.survey"></div>
+        <div class="row">
+            <div survey src="mc.survey" class="col-md-6"></div>
+        </div>
         
-        <div ng-bind="mc.survey | json"></div>
+        <div ng-show="false" ng-bind="mc.survey | json"></div>
         
         <!-- scripts -->
+        <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+        <script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
         <script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
         <script type="text/javascript" src="js/app.js"></script>
         <script type="text/javascript" src="js/controllers/main-controller.js"></script>
