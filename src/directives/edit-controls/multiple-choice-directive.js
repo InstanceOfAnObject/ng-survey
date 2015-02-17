@@ -5,16 +5,16 @@ angular.module('ngSurvey')
         return {
             restrict: 'A',
             scope: {
-                field: '=src'
+                question: '=src'
             },
             template: function() { 
                 var tmpl = [];
-                tmpl.push('<label for="{{field.id}}" ng-bind="field.caption"></label>');
+                tmpl.push('<label for="{{question.id}}" ng-bind="question.caption"></label>');
                 tmpl.push('<ul>');
-                tmpl.push('  <li ng-repeat="option in field.options">');
-                tmpl.push('    <label for="{{field.id}}_option{{$index}}">');
-                tmpl.push('      <input ng-if="!field.singleAnswer" id="{{field.id}}_option{{$index}}" type="checkbox" name="{{field.id}}_options" ng-model="option.value" />');
-                tmpl.push('      <input ng-if="field.singleAnswer" id="{{field.id}}_option{{$index}}" type="radio" name="{{field.id}}_options" ng-model="field.value" ng-value="option.value" />');
+                tmpl.push('  <li ng-repeat="option in question.options">');
+                tmpl.push('    <label for="{{question.id}}_option{{$index}}">');
+                tmpl.push('      <input ng-if="!question.singleAnswer" id="{{question.id}}_option{{$index}}" type="checkbox" name="{{question.id}}_options" ng-model="option.value" />');
+                tmpl.push('      <input ng-if="question.singleAnswer" id="{{question.id}}_option{{$index}}" type="radio" name="{{question.id}}_options" ng-model="question.value" ng-value="option.value" />');
                 tmpl.push('      {{option.text}}');
                 tmpl.push('    </label>')
                 tmpl.push(' </li>');

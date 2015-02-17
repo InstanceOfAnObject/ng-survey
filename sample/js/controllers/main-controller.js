@@ -4,12 +4,11 @@ angular.module('testapp')
         this.header = 'ngSurvey Test App';
         
         this.survey = {
-            regions: [
+            groups: [
                 {
                     id: 'JavaScript',
                     title: 'Core JavaScript Questions',
-                    group: 'javascript', // optional question group
-                    fields: [
+                    questions: [
                         { id: 'region1_field1', type: 'textbox', caption: 'Question 1' },
                         { id: 'region1_field2', type: 'textarea', caption: 'Question 2' },
                         { id: 'region1_field3', type: 'select', caption: 'Question 3',
@@ -23,8 +22,7 @@ angular.module('testapp')
                 {
                     id: 'AngularJS',
                     title: 'AngularJS Questions',
-                    group: 'angularjs', // optional question group
-                    fields: [
+                    questions: [
                         { id: 'region2_field1', type: 'textbox', caption: 'Question 1' },
                         
                         /* Example of a multiple answer multiple choice question */

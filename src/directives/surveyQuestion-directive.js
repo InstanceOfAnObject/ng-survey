@@ -5,7 +5,7 @@
 */
 
 angular.module('ngSurvey')
-    .directive('surveyField', ['$compile', function($compile){
+    .directive('surveyQuestion', ['$compile', function($compile){
         
         var getTemplate = function(type){
             var tmpl =  [];
@@ -13,16 +13,16 @@ angular.module('ngSurvey')
             
             switch (type) {
                 case 'textbox':
-                    tmpl.push('<div survey-control-textbox class="form-group" src="field"></div>');
+                    tmpl.push('<div survey-control-textbox class="form-group" src="question"></div>');
                     break;
                 case 'textarea':
-                    tmpl.push('<div survey-control-textarea src="field"></div>');
+                    tmpl.push('<div survey-control-textarea src="question"></div>');
                     break;
                 case 'select':
-                    tmpl.push('<div survey-control-select src="field"></div>');
+                    tmpl.push('<div survey-control-select src="question"></div>');
                     break;
                 case 'multiplechoice':
-                    tmpl.push('<div survey-control-multiple-choice src="field"></div>');
+                    tmpl.push('<div survey-control-multiple-choice src="question"></div>');
                     break;
                 default:
                     tmpl.push('<span>Unsupported field type</span>');
@@ -37,10 +37,10 @@ angular.module('ngSurvey')
         return {
             restrict: 'A',
             scope: {
-                field: '=src'  
+                question: '=src'  
             },
             link: function(scope, elem, attrs, ctrl){
-                var el = $compile(getTemplate(scope.field.type))(scope);
+                var el = $compile(getTemplate(scope.question.type))(scope);
                 elem.replaceWith(el);
             }
         };

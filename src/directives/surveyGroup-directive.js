@@ -4,17 +4,17 @@
 */
 
 angular.module('ngSurvey')
-    .directive('surveyRegion', [function(){
+    .directive('surveyGroup', [function(){
         return {
             restrict: 'A',
             scope: {
-                src: '=',
+                questions: '=src',
                 qidx: '='
             },
             template: function() { 
                 var tmpl =  [];
-                tmpl.push('<div data-ng-repeat="field in src" ng-show="$index == qidx">');
-                tmpl.push('  <div survey-field src="field"></div>');
+                tmpl.push('<div data-ng-repeat="question in questions" ng-show="$index == qidx">');
+                tmpl.push('  <div survey-question src="question"></div>');
                 tmpl.push('</div>');
                 
                 return tmpl.join('');

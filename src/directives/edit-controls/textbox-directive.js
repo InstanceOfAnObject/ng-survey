@@ -5,12 +5,12 @@ angular.module('ngSurvey')
         return {
             restrict: 'A',
             scope: {
-                field: '=src'
+                question: '=src'
             },
             template: function() { 
                 var tmpl = [];
-                tmpl.push('<label for="{{field.id}}" ng-bind="field.caption"></label>');
-                tmpl.push('<input id="{{field.id}}" type="text" class="form-control" ng-model="field.value" />');
+                tmpl.push('<label for="{{question.id}}" ng-bind="question.caption"></label>');
+                tmpl.push('<input id="{{question.id}}" type="text" class="form-control" ng-model="question.value" />');
                 
                 return tmpl.join('');
             },
