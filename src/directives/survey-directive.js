@@ -51,7 +51,7 @@ angular.module('ngSurvey')
                     if(isLastQuestion && isLastGroup){
                         scope.finish = true;
                     }
-                }
+                };
                 
                 scope.onGoToPreviousQuestion = function(){
                     if(scope.activeQuestionIdx > 0){

@@ -16,7 +16,7 @@ angular.module('ngSurvey')
                 tmpl.push('      <input ng-if="!question.singleAnswer" id="{{question.id}}_option{{$index}}" type="checkbox" name="{{question.id}}_options" ng-model="option.value" />');
                 tmpl.push('      <input ng-if="question.singleAnswer" id="{{question.id}}_option{{$index}}" type="radio" name="{{question.id}}_options" ng-model="question.value" ng-value="option.value" />');
                 tmpl.push('      {{option.text}}');
-                tmpl.push('    </label>')
+                tmpl.push('    </label>');
                 tmpl.push(' </li>');
                 tmpl.push('</ul>');
                 
