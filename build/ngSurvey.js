@@ -249,3 +249,17 @@ angular.module('ngSurvey')
             }
         };
     }]);
+
+/* navigaion rules (back/forward) */
+angular.module('ngSurvey')
+    .factory('navigation', [function(){
+        
+        var moveNext = function(){
+            
+        };
+        
+        var movePrevious = function(){
+            
+        };
+        
+    }]);
