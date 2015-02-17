@@ -17,9 +17,9 @@ angular.module('ngSurvey')
                 tmpl.push('  </li>');
                 tmpl.push('</ul>');
                 tmpl.push('<p>');
-                tmpl.push('  <input type="button" class="btn btn-secondary" ng-click="goToPreviousQuestion()" value="Previous" ng-hide="(activeRegionIdx + activeQuestionIdx) === 0" />');
-                tmpl.push('  <input type="button" class="btn btn-primary" ng-click="gotToNextQuestion()" value="Next" ng-hide="finish" />');
-                tmpl.push('  <input type="button" class="btn btn-primary" ng-click="finish()" value="Finish" ng-show="finish" />');
+                tmpl.push('  <input type="button" class="btn btn-secondary" ng-click="onGoToPreviousQuestion()" value="Previous" ng-hide="(activeRegionIdx + activeQuestionIdx) === 0" />');
+                tmpl.push('  <input type="button" class="btn btn-primary" ng-click="onGotToNextQuestion()" value="Next" ng-hide="finish" />');
+                tmpl.push('  <input type="button" class="btn btn-primary" ng-click="onFinish()" value="Finish" ng-show="finish" />');
                 tmpl.push('</p>');
                 
                 return tmpl.join('');
@@ -29,8 +29,10 @@ angular.module('ngSurvey')
                 scope.activeQuestionIdx = 0;
                 scope.finish = false;
                 
-                scope.gotToNextQuestion = function(){
-                    
+                console.log('init');
+                
+                scope.onGotToNextQuestion = function(){
+                    console.log('next');
                     var isLastQuestion = false,
                         isLastRegion = false;
                         
@@ -54,7 +56,8 @@ angular.module('ngSurvey')
                     }
                 }
                 
-                scope.goToPreviousQuestion = function(){
+                scope.onGoToPreviousQuestion = function(){
+                    console.log('prev');
                     if(scope.activeQuestionIdx > 0){
                         scope.activeQuestionIdx--;
                         scope.finish = false;
@@ -63,6 +66,10 @@ angular.module('ngSurvey')
                         scope.activeQuestionIdx = scope.src.regions[scope.activeRegionIdx].fields.length - 1;
                         scope.finish = false;
                     }
+                };
+                
+                scope.onFinish = function(){
+                    
                 };
                 
             }

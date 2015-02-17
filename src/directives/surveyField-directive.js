@@ -40,7 +40,6 @@ angular.module('ngSurvey')
                 field: '=src'  
             },
             link: function(scope, elem, attrs, ctrl){
-                console.log(scope.field.type);
                 var el = $compile(getTemplate(scope.field.type))(scope);
                 elem.replaceWith(el);
             }
