@@ -1,5 +1,5 @@
 // initialize ngSurvey module
-angular.module('ngSurvey', []);;
+angular.module('ngSurvey', []);
 
 // survey textbox control
 angular.module('ngSurvey')
@@ -30,7 +30,7 @@ angular.module('ngSurvey')
             }
         };
         
-    });;
+    });
 
 // survey select (dropdown) control
 angular.module('ngSurvey')
@@ -53,7 +53,7 @@ angular.module('ngSurvey')
             }
         };
         
-    });;
+    });
 
 // survey textbox control
 angular.module('ngSurvey')
@@ -76,7 +76,7 @@ angular.module('ngSurvey')
             }
         };
         
-    });;
+    });
 
 // survey textbox control
 angular.module('ngSurvey')
@@ -99,7 +99,7 @@ angular.module('ngSurvey')
             }
         };
         
-    });;
+    });
 
 /*
     The main survey directive, everything else is generated inside this element.
@@ -173,7 +173,7 @@ angular.module('ngSurvey')
                 
             }
         };
-    }]);;
+    }]);
 
 /*
     Surveys are devided in regions.
@@ -200,7 +200,7 @@ angular.module('ngSurvey')
                 
             }
         };
-    }]);;
+    }]);
 
 /*
     Each region have several fields (questions).
